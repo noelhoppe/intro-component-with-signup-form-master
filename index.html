@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"> <!-- normalize css -->
+  <link rel="stylesheet" href="styles.css"> <!-- link individual stylesheet -->
+</head>
+<body> <!-- check for HTML5 semantic -->
+  <main>
+    <header>
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+    <section>
+      <p>Try it free 7 days then $20/mo. thereafter</p>
+      <form> <!-- nest <p> tag into <form> tag? -->
+        <!-- here  I don't need <label> tags and the aria-label attribute, right? (tested with Chrome screen reader) -->
+        <input id="firstName" placeholder="First Name" required>
+        <input id="lastName" placeholder="Last Name" required>
+        <input id="email" placeholder="Email Address" type="email" required>
+        <input id="password" placeholder="Password" type="password" required>
+        <button type="submit">Claim your free trial</button>
+      </form>
+      <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+    </section>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Noel</a>.
+    </p>
+  </footer>
+</body>
+</html>
