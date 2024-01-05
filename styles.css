@@ -17,7 +17,7 @@
 }
 
 body {
-    background-image: url("/images/bg-intro-mobile.png");
+    background-image: url(images/bg-intro-mobile.png);
     background-color: var(--clr-primary-red);
     color: white;
     line-height: 1.5rem; /* problems with line-height for the <h1> tag */
@@ -90,7 +90,7 @@ button, input {
 
 @media screen and (min-width: 426px) /* min-width property phone up */ {
     body {
-        background-image: url("/images/bg-intro-desktop.png");
+        background-image: url(images/bg-intro-desktop.png);
     }
     main {
         flex-direction: row;
