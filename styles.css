@@ -9,6 +9,7 @@
 
     font-family: Poppins;
 
+    /* I know, this are the default values :) */
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semi-bold: 600;
@@ -16,11 +17,82 @@
 }
 
 body {
-    font-size: 16px;
+    background-image: url("/images/bg-intro-mobile.png");
+    background-color: var(--clr-primary-red);
+    color: white;
+    line-height: 1.5rem; /* problems with line-height for the <h1> tag */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-input,
+h1 {
+    font-size: 1.5rem;
+}
+
+/* I have to scroll in mobile version I believe it's not the style's intention */
+/* flexbox the right choose or should I use better grid?  */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 10%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#offer {
+    padding: 20px;
+    background-color: var(--clr-acceent-blue);
+    border-radius: 10px;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 button {
     text-transform: uppercase;
+    margin-top: 20px;
 }
 
+button, input {
+    padding: 20px;
+}
+
+#conditions {
+    color: lightgray;
+}
+
+#conditions > a {
+    color: var(--clr-primary-red);
+}
+
+.border-radius {
+    border-radius: 10px; /* border on <input> tag looks wierd */
+}
+
+@media screen and (min-width: 426px) /* min-width property phone up */ {
+    body {
+        background-image: url("/images/bg-intro-desktop.png");
+    }
+    main {
+        flex-direction: row;
+    }
+}

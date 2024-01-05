@@ -20,16 +20,18 @@
       </p>
     </header>
     <section>
-      <p>Try it free 7 days then $20/mo. thereafter</p>
-      <form> <!-- nest <p> tag into <form> tag? -->
-        <!-- here  I don't need <label> tags and the aria-label attribute, right? (tested with Chrome screen reader) -->
-        <input id="firstName" placeholder="First Name" required>
-        <input id="lastName" placeholder="Last Name" required>
-        <input id="email" placeholder="Email Address" type="email" required>
-        <input id="password" placeholder="Password" type="password" required>
-        <button type="submit">Claim your free trial</button>
-      </form>
-      <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+      <p id="offer" class="border-radius"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+      <div class="form-container border-radius">
+        <form> <!-- nest <p> tag into <form> tag? -->
+          <!-- here  I don't need <label> tags and the aria-label attribute, right? (tested with Chrome screen reader) -->
+          <input id="firstName" placeholder="First Name" required class="border-radius">
+          <input id="lastName" placeholder="Last Name" required class="border-radius">
+          <input id="email" placeholder="Email Address" type="email" required class="border-radius">
+          <input id="password" placeholder="Password" type="password" required class="border-radius">
+          <button type="submit" class="border-radius">Claim your free trial</button>
+        </form>
+        <p id="conditions">By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+      </div>
     </section>
   </main>
   <footer>
