@@ -8,7 +8,8 @@
   
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"> <!-- normalize css -->
-  <link rel="stylesheet" href="styles.css"> <!-- link individual stylesheet -->
+  <link rel="stylesheet" href="styles.css">  <!-- link individual stylesheet -->
+  <script src="build/Form.js"></script> <!-- link js-file -->
 </head>
 <body> <!-- check for HTML5 semantic -->
   <main>
@@ -24,11 +25,20 @@
       <div class="form-container border-radius">
         <form> <!-- nest <p> tag into <form> tag? -->
           <!-- here  I don't need <label> tags and the aria-label attribute, right? (tested with Chrome screen reader) -->
+          <!-- type, required (HTML validation attributes) are not important because I implement my own form validation?! -->
           <input id="firstName" placeholder="First Name" required class="border-radius">
+          <p class="error-Message"></p> <!-- textContent is manipulated with ts -->
           <input id="lastName" placeholder="Last Name" required class="border-radius">
+          <p class="error-Message"></p>
           <input id="email" placeholder="Email Address" type="email" required class="border-radius">
+          <p class="error-Message"></p>
           <input id="password" placeholder="Password" type="password" required class="border-radius">
-          <button type="submit" class="border-radius">Claim your free trial</button>
+          <p class="error-Message"></p>
+          <div id="togglePasswordVisibility">
+            <input type="checkbox">
+            <p class="blackColor">Show password</p>
+          </div>
+          <button id="submit" type="submit" class="border-radius">Claim your free trial</button>
         </form>
         <p id="conditions">By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
       </div>
@@ -40,5 +50,6 @@
       Coded by <a href="#">Noel</a>.
     </p>
   </footer>
+
 </body>
 </html>

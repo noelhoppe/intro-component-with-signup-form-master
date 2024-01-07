@@ -7,7 +7,7 @@
     --clr-neutral-dark-blue: hsl(248, 10%, 26%);
     --clr-neutarl-grayish-blue: hsl(246, 25%, 77%);
 
-    font-family: Poppins;
+    font-family: Poppins, sans-serif; /* define second alternative font */
 
     /* I know, this are the default values :) */
     --font-weight-normal: 400;
@@ -27,6 +27,16 @@ body {
     text-align: center;
 }
 
+.blackColor {
+    color: black;
+}
+
+#togglePasswordVisibility {
+    display: flex;
+    gap: 5px;
+}
+
+
 h1 {
     font-size: 1.5rem;
 }
@@ -40,6 +50,10 @@ main {
     margin: 10%;
 }
 
+footer {
+    margin: 0 10%;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -50,7 +64,6 @@ header {
     padding: 20px;
     background-color: var(--clr-acceent-blue);
     border-radius: 10px;
-    color: white;
 }
 
 .form-container {
@@ -64,17 +77,20 @@ header {
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 button {
     text-transform: uppercase;
     margin-top: 20px;
+    background-color: var(--clr-primary-green);
+    color: white;
 }
 
 button, input {
     padding: 20px;
+    border: 2px solid lightgray;
 }
+
 
 #conditions {
     color: lightgray;
@@ -85,14 +101,32 @@ button, input {
 }
 
 .border-radius {
-    border-radius: 10px; /* border on <input> tag looks wierd */
+    border-radius: 10px;
 }
 
-@media screen and (min-width: 426px) /* min-width property phone up */ {
+@media screen and (min-width: 576px) /* min-width property */ {
     body {
         background-image: url(images/bg-intro-desktop.png);
     }
     main {
         flex-direction: row;
     }
+}
+
+
+/*  TypeScript classes */
+/* Validation CSS pseudo classes are not necessary because of my own form validation? */
+.isValidInput {
+    border-color: var(--clr-primary-green);
+}
+
+.invalidInput {
+    border-color: var(--clr-primary-red);
+}
+
+.error-Message {
+    color: var(--clr-primary-red);
+    height: 20px;
+    margin: 0 0 10px 0;
+    text-align: right;
 }
