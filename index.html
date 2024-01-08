@@ -27,13 +27,13 @@
           <!-- here  I don't need <label> tags and the aria-label attribute, right? (tested with Chrome screen reader) -->
           <!-- type, required (HTML validation attributes) are not important because I implement my own form validation?! -->
           <input id="firstName" placeholder="First Name" required class="border-radius">
-          <p class="error-Message"></p> <!-- textContent is manipulated with ts -->
+          <p id="firstNameError" class="error-Message"></p> <!-- textContent is manipulated with ts -->
           <input id="lastName" placeholder="Last Name" required class="border-radius">
-          <p class="error-Message"></p>
+          <p id="lastNameError" class="error-Message"></p>
           <input id="email" placeholder="Email Address" type="email" required class="border-radius">
-          <p class="error-Message"></p>
+          <p id="emailError" class="error-Message"></p>
           <input id="password" placeholder="Password" type="password" required class="border-radius">
-          <p class="error-Message"></p>
+          <p id="passwordError" class="error-Message"></p>
           <div id="togglePasswordVisibility">
             <input type="checkbox">
             <p class="blackColor">Show password</p>
