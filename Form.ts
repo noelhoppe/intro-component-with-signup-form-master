@@ -62,13 +62,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const invalidPasswordMessage : string = "Password cannot be empty. It has to contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
 
     function validateForm() {
-        if (isValidFirstName()) firstNameError.textContent = "";
-        else firstNameError.textContent = invalidFirstNameMessage;
-        if (isValidLastName()) lastNameError.textContent = "";
-        else lastNameError.textContent = invalidLastNameMessage;
-        if (isValidMail()) emailError.textContent = "";
-        else emailError.textContent = invalidMailMessage;
-        if (isValidPassword()) passwordError.textContent = "";
-        else passwordError.textContent = invalidPasswordMessage;
+        if (isValidFirstName()) {
+            firstNameError.textContent = "";
+            firstNameInput.className = "validInput"
+        } else {
+            firstNameError.textContent = invalidFirstNameMessage;
+            firstNameInput.className = "invalidInput";
+        }
+        if (isValidLastName()) {
+            lastNameError.textContent = "";
+            lastNameInput.className = "validInput";
+        }
+        else {
+            lastNameError.textContent = invalidLastNameMessage;
+            lastNameInput.className = "invalidInput"
+        }
+        if (isValidMail()) {
+            emailError.textContent = "";
+            emailInput.className = "validInput";
+        }
+        else {
+            emailError.textContent = invalidMailMessage;
+            emailInput.className = "invalidInput";
+        }
+        if (isValidPassword()) {
+            passwordError.textContent = "";
+            passwordInput.className = "validInput";
+        }
+        else {
+            passwordError.textContent = invalidPasswordMessage;
+            passwordInput.className = "invalidInput";
+        }
     }
 })

@@ -116,7 +116,7 @@ button, input {
 
 /*  TypeScript classes */
 /* Validation CSS pseudo classes are not necessary because of my own form validation? */
-.isValidInput {
+.validInput {
     border-color: var(--clr-primary-green);
 }
 

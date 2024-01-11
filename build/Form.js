@@ -53,21 +53,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const invalidMailMessage = "Looks like this is not an email";
     const invalidPasswordMessage = "Password cannot be empty. It has to contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
     function validateForm() {
-        if (isValidFirstName())
+        if (isValidFirstName()) {
             firstNameError.textContent = "";
-        else
+            firstNameInput.className = "validInput";
+        }
+        else {
             firstNameError.textContent = invalidFirstNameMessage;
-        if (isValidLastName())
+            firstNameInput.className = "invalidInput";
+        }
+        if (isValidLastName()) {
             lastNameError.textContent = "";
-        else
+            lastNameInput.className = "validInput";
+        }
+        else {
             lastNameError.textContent = invalidLastNameMessage;
-        if (isValidMail())
+            lastNameInput.className = "invalidInput";
+        }
+        if (isValidMail()) {
             emailError.textContent = "";
-        else
+            emailInput.className = "validInput";
+        }
+        else {
             emailError.textContent = invalidMailMessage;
-        if (isValidPassword())
+            emailInput.className = "invalidInput";
+        }
+        if (isValidPassword()) {
             passwordError.textContent = "";
-        else
+            passwordInput.className = "validInput";
+        }
+        else {
             passwordError.textContent = invalidPasswordMessage;
+            passwordInput.className = "invalidInput";
+        }
     }
 });
